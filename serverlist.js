@@ -95,10 +95,9 @@ server.on("message",function(msg, rinfo)
 
 
     server.on('listening', () => {
-        console.log(`started server list: ${address.address}:${address.port}`);
-        
-
-      }
+        const address = server.address();
+        console.log(`started server: ${address.address}:${address.port}`);
+      });
 
 
 server.bind(port);
